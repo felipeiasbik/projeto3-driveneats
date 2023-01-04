@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+.body {
+    box-sizing: border-box;
+}
+
+.conteudo {
+    background: #f3f3f3;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cabecalho {
+    box-sizing: border-box;
+    background: #CF2B2B;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 21px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: -1,2%;
+    color: #ffffff;
+}
+
+.cabecalho h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.container {
+    margin-top: 80px;
+    padding: 19px;
+}
+
+.container h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 1,8%;
+    color: #333333;
+}
+
+.opcoes {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.opcoes::-webkit-scrollbar  {
+    display: none;
+}
+
+.opcoes-individuais {
+    background: #ffffff;
+    min-width: 172px;
+    height: 216px;
+    margin: 17px 16px 0 0;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+.opcoes-individuais img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+.nome-produto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.desc-produto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+
+.preco-produto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.prato {
+    height: 258px;
+    margin-top: 27px;
+}
+
+.bebida {
+    height: 258px;
+    margin-top: 27px;
+}
+
+.sobremesa {
+    height: 258px;
+    margin-top: 27px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    background: #ffffff;
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.botao-fechar-pedido {
+    background: #cbcbcb;
+    height: 61px;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-fechar-pedido p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.8%;
+    line-height: 23px;
+    color: #ffffff;
+    margin: 0 auto;
+    width: 60%;
+}
