@@ -1,18 +1,19 @@
 function selecionado(produtoSelecionado){
 
-    let MarcadoAntes = document.querySelector(".marcacao");
-    let iconeVisivel = document.querySelector(produtoSelecionado + ".opcoes-individuais ion-icon");
+    let marcadoAntes = document.querySelector(".marcacao");
 
-    if (MarcadoAntes !== null){
-        MarcadoAntes.classList.remove("marcacao");
-        iconeVisivel.classList.add("icon-off");
+    if (marcadoAntes !== null){
+        let iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
+
+        marcadoAntes.classList.remove("marcacao");
+        iconeMarcadoAntes.classList.add("icon-off");
     }
 
     let marcado = document.querySelector(produtoSelecionado);
-    console.log(marcado);
+    let iconeMarcadoAntes = marcado.querySelector("ion-icon");
+
     marcado.classList.add("marcacao");
-    console.log(iconeVisivel);
-    iconeVisivel.classList.remove("icon-off");
+    iconeMarcadoAntes.classList.remove("icon-off");
 
 
 }

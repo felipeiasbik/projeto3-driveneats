@@ -183,3 +183,7 @@
 .icon-off {
     display: none;
 }
+
+.icon-on {
+    display: flex;
+}
