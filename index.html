@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <title>DrivenEats</title>
     </head>
     <body>
         <div class="conteudo">
@@ -18,69 +19,96 @@
                 <div class="prato">
                     <h1>Primeiro, seu prato</h1>
                     <div class="opcoes">
-                        <div class="opcoes-individuais">
+                        <div onclick="selecionado('.espetinho')" class="opcoes-individuais espetinho ">
                             <img src="img/espetinho.jpg">
                             <p class="nome-produto">Espetinho</p>
                             <p class="desc-produto">Uma delícia no espeto</p>
-                            <p class="preco-produto">R$ 10,90</p>
+                            <div class="individuais-bottom espetinho">
+                                <p class="preco-produto">R$ 10,90</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
-                        <div class="opcoes-individuais">
+                        <div onclick="selecionado('.macarronada')" class="opcoes-individuais macarronada">
                             <img src="img/macarronada.jpg">
                             <p class="nome-produto">Macarronada</p>
                             <p class="desc-produto">Feito com massa caseira temperada</p>
-                            <p class="preco-produto">R$ 12,50</p>
+                            <div class="individuais-bottom macarronada">
+                                <p class="preco-produto">R$ 12,50</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
-                        <div class="opcoes-individuais">
+                        <div onclick="selecionado('.frango')" class="opcoes-individuais frango">
                             <img src="img/frango_yin_yang.png">
                             <p class="nome-produto">Frango Yin Yang</p>
                             <p class="desc-produto">Um pouco de batata, um pouco de salada</p>
-                            <p class="preco-produto">R$ 14,00</p>
+                            <div class="individuais-bottom frango">
+                                <p class="preco-produto">R$ 14,00</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="bebida">
                     <h1>Agora, sua bebida</h1>
                     <div class="opcoes">
-                        <div class="opcoes-individuais">
+                        <div onclick="selecionado('.coca')" class="opcoes-individuais coca">
                             <img src="img/coca-cola.png">
                             <p class="nome-produto">Coquinha gelada</p>
                             <p class="desc-produto">Lata 350ml</p>
-                            <p class="preco-produto">R$ 4,50</p>
+                            <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 4,50</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
                         </div>
-                        <div class="opcoes-individuais">
+                        </div>
+                        <div onclick="selecionado('.guarana')" class="opcoes-individuais guarana">
                             <img src="img/guarana.jpg">
                             <p class="nome-produto">Guaraná Antarctica</p>
                             <p class="desc-produto">Garrafa 500ml</p>
-                            <p class="preco-produto">R$ 5,90</p>
+                            <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 5,90</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
                         </div>
-                        <div class="opcoes-individuais">
+                        </div>
+                        <div onclick="selecionado('.fanta')" class="opcoes-individuais fanta">
                             <img src="img/fanta.jpg">
                             <p class="nome-produto">Fanta Laranja</p>
                             <p class="desc-produto">Garrafa 600ml</p>
-                            <p class="preco-produto">R$ 7,00</p>
+                            <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 7,00</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
+                        </div>
                         </div>
                     </div>
                 </div>
                 <div class="sobremesa">
                     <h1>Por fim, sua sobremesa</h1>
                     <div class="opcoes">
-                        <div class="opcoes-individuais">
+                        <div onclick="selecionado('.pudim')" class="opcoes-individuais pudim">
                             <img src="img/pudim.png">
                             <p class="nome-produto">Pudim</p>
                             <p class="desc-produto">Apenas pudim</p>
-                            <p class="preco-produto">R$ 7,90</p>
+                            <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 7,90</p>
+                                <ion-icon nclass="icon-off" ame="checkmark-circle"></ion-icon>
                         </div>
-                        <div class="opcoes-individuais">
+                        </div>
+                        <div onclick="selecionado('.bolo')" class="opcoes-individuais bolo">
                             <img src="img/bolo.jpg">
                             <p class="nome-produto">Bolo Cenoura</p>
                             <p class="desc-produto">Fatia</p>
-                            <p class="preco-produto">R$ 10,00</p>
+                            <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 10,00</p>
+                                <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
                         </div>
-                        <div class="opcoes-individuais">
+                        </div>
+                        <div onclick="selecionado('.brownie')" class="opcoes-individuais brownie">
                             <img src="img/brownie.jpg">
                             <p class="nome-produto">Brownie</p>
                             <p class="desc-produto">Pedaço</p>
-                            <p class="preco-produto">R$ 12,50</p>
+                                <div class="individuais-bottom">
+                                <p class="preco-produto">R$ 12,50</p>
+                            <ion-icon class="icon-off" name="checkmark-circle"></ion-icon>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -91,6 +119,8 @@
                 </div>
             </div>
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="scripts.js"></script>
     </body>
 </html>
