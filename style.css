@@ -164,10 +164,33 @@
     align-items: center;
 }
 
+
+.botao-fechar-pedido-habilitado {
+    background: #32B72F;
+    height: 61px;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .botao-fechar-pedido p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: 1.8%;
+    line-height: 23px;
+    text-align: center;;
+    color: #ffffff;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.botao-fechar-pedido-habilitado p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     letter-spacing: 1.8%;
     line-height: 23px;
     text-align: center;;
