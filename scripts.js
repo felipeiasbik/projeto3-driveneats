@@ -37,10 +37,6 @@ function selecionado(produtoSelecionado){
 
     comparacaoPrato = 1;
 
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
-        habilitarBotao.attributes.removeNamedItem("disabled");
-    }
-
     PedidoPrato = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoPrato = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
     
@@ -48,6 +44,12 @@ function selecionado(produtoSelecionado){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
+        console.log(habilitarBotao);
+    }
+
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+        console.log(habilitarBotao);
     }
 
 }
@@ -77,10 +79,6 @@ function selecionado2(produtoSelecionado){
 
     comparacaoBebida = 1;
 
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
-        habilitarBotao.attributes.removeNamedItem("disabled");
-    }
-
     PedidoBebida = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoBebida = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
  
@@ -88,6 +86,12 @@ function selecionado2(produtoSelecionado){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
+        console.log(habilitarBotao);
+    }
+
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+        console.log(habilitarBotao);
     }
 
 }
@@ -117,10 +121,6 @@ function selecionado3(produtoSelecionado){
 
     comparacaoSobremesa = 1;
 
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
-        habilitarBotao.attributes.removeNamedItem("disabled");
-    }
-
     PedidoSobremesa = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoSobremesa = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
 
@@ -128,6 +128,12 @@ function selecionado3(produtoSelecionado){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "Fechar Pedido";
+        console.log(habilitarBotao);
+    }
+
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+        console.log(habilitarBotao);
     }
 
 }
