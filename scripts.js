@@ -37,6 +37,10 @@ function selecionado(produtoSelecionado){
 
     comparacaoPrato = 1;
 
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+    }
+
     PedidoPrato = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoPrato = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
     
@@ -73,9 +77,13 @@ function selecionado2(produtoSelecionado){
 
     comparacaoBebida = 1;
 
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+    }
+
     PedidoBebida = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoBebida = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
-   
+ 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
@@ -109,14 +117,17 @@ function selecionado3(produtoSelecionado){
 
     comparacaoSobremesa = 1;
 
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        habilitarBotao.attributes.removeNamedItem("disabled");
+    }
+
     PedidoSobremesa = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoSobremesa = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
-    PedidoPrecoTotal += Number(PedidoPrecoSobremesa);
 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
-        textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
+        textohabilitarBotao.innerHTML = "Fechar Pedido";
     }
 
 }
