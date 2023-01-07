@@ -130,6 +130,6 @@ function finalizar() {
     let texto;
     texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${PedidoPrato}\n- Bebida: ${PedidoBebida}\n- Sobremesa: ${PedidoSobremesa}\nTotal: R$ ${precoBR}`;
     texto = window.encodeURIComponent(texto);
-    window.open("https://wa.me/+5532988182800?text=" + texto);
+    window.open("https://wa.me/+5532999999999?text=" + texto);
     }
 }
