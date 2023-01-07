@@ -38,10 +38,8 @@ function selecionado(produtoSelecionado){
     comparacaoPrato = 1;
 
     PedidoPrato = marcado.querySelector(".nome-produto").innerHTML;
-    PedidoPrecoPrato = marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.');
-    console.log(PedidoPrecoPrato);
-    PedidoPrecoTotal += Number(PedidoPrecoPrato);
-
+    PedidoPrecoPrato = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
+    
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
@@ -76,10 +74,8 @@ function selecionado2(produtoSelecionado){
     comparacaoBebida = 1;
 
     PedidoBebida = marcado.querySelector(".nome-produto").innerHTML;
-    PedidoPrecoBebida = marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.');
-    console.log(PedidoPrecoBebida);
-    PedidoPrecoTotal += Number(PedidoPrecoBebida);
-
+    PedidoPrecoBebida = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
+   
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
@@ -114,8 +110,7 @@ function selecionado3(produtoSelecionado){
     comparacaoSobremesa = 1;
 
     PedidoSobremesa = marcado.querySelector(".nome-produto").innerHTML;
-    PedidoPrecoSobremesa = marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.');
-    console.log(PedidoPrecoSobremesa);
+    PedidoPrecoSobremesa = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
     PedidoPrecoTotal += Number(PedidoPrecoSobremesa);
 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
@@ -128,7 +123,8 @@ function selecionado3(produtoSelecionado){
 
 
 function finalizar() {
-
+    PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
+    console.log(PedidoPrecoTotal);
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
     let precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
     let texto;
