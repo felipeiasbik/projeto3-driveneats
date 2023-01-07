@@ -9,17 +9,16 @@ let PedidoPrecoBebida = 0;
 let PedidoPrecoSobremesa = 0;
 let PedidoPrecoTotal = 0;
 
-let habilitarBotao = document.querySelector('.botao-fechar-pedido');
-let textohabilitarBotao = document.querySelector('.botao-fechar-pedido p');
+const habilitarBotao = document.querySelector('.botao-fechar-pedido');
+const textohabilitarBotao = document.querySelector('.botao-fechar-pedido p');
 
 function selecionado(produtoSelecionado){
-    let grupoPrato = document.querySelector(".prato");
+    const grupoPrato = document.querySelector(".prato");
 
-    
-    let marcadoAntes = grupoPrato.querySelector(".marcacao");
+    const marcadoAntes = grupoPrato.querySelector(".marcacao");
 
     if (marcadoAntes !== null){
-        let iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
+        const iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
 
         marcadoAntes.classList.remove("marcacao");
         iconeMarcadoAntes.classList.add("icon-off");
@@ -29,8 +28,8 @@ function selecionado(produtoSelecionado){
         }
     }
 
-    let marcado = document.querySelector(produtoSelecionado);
-    let iconeMarcadoAntes = marcado.querySelector("ion-icon");
+    const marcado = document.querySelector(produtoSelecionado);
+    const iconeMarcadoAntes = marcado.querySelector("ion-icon");
 
     marcado.classList.add("marcacao");
     iconeMarcadoAntes.classList.remove("icon-off");
@@ -39,29 +38,26 @@ function selecionado(produtoSelecionado){
 
     PedidoPrato = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoPrato = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
-    
+
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
-        console.log(habilitarBotao);
     }
 
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
         habilitarBotao.attributes.removeNamedItem("disabled");
-        console.log(habilitarBotao);
     }
 
 }
 
 function selecionado2(produtoSelecionado){
-    let grupoBebida = document.querySelector(".bebida");
+    const grupoBebida = document.querySelector(".bebida");
 
-    
-    let marcadoAntes = grupoBebida.querySelector(".marcacao");
+    const marcadoAntes = grupoBebida.querySelector(".marcacao");
 
     if (marcadoAntes !== null){
-        let iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
+        const iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
 
         marcadoAntes.classList.remove("marcacao");
         iconeMarcadoAntes.classList.add("icon-off");
@@ -71,8 +67,8 @@ function selecionado2(produtoSelecionado){
         }
     }
 
-    let marcado = document.querySelector(produtoSelecionado);
-    let iconeMarcadoAntes = marcado.querySelector("ion-icon");
+    const marcado = document.querySelector(produtoSelecionado);
+    const iconeMarcadoAntes = marcado.querySelector("ion-icon");
 
     marcado.classList.add("marcacao");
     iconeMarcadoAntes.classList.remove("icon-off");
@@ -81,29 +77,26 @@ function selecionado2(produtoSelecionado){
 
     PedidoBebida = marcado.querySelector(".nome-produto").innerHTML;
     PedidoPrecoBebida = Number(marcado.querySelector(".preco-produto").innerHTML.replace(/[^\d,]/g, '').replace(/(\,)/, '.'));
- 
+
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
-        console.log(habilitarBotao);
     }
 
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
         habilitarBotao.attributes.removeNamedItem("disabled");
-        console.log(habilitarBotao);
     }
 
 }
 
 function selecionado3(produtoSelecionado){
-    let grupoSobremesa = document.querySelector(".sobremesa");
+    const grupoSobremesa = document.querySelector(".sobremesa");
 
-    
-    let marcadoAntes = grupoSobremesa.querySelector(".marcacao");
+    const marcadoAntes = grupoSobremesa.querySelector(".marcacao");
 
     if (marcadoAntes !== null){
-        let iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
+        const iconeMarcadoAntes = marcadoAntes.querySelector("ion-icon");
 
         marcadoAntes.classList.remove("marcacao");
         iconeMarcadoAntes.classList.add("icon-off");
@@ -113,8 +106,8 @@ function selecionado3(produtoSelecionado){
         }
     }
 
-    let marcado = document.querySelector(produtoSelecionado);
-    let iconeMarcadoAntes = marcado.querySelector("ion-icon");
+    const marcado = document.querySelector(produtoSelecionado);
+    const iconeMarcadoAntes = marcado.querySelector("ion-icon");
 
     marcado.classList.add("marcacao");
     iconeMarcadoAntes.classList.remove("icon-off");
@@ -142,7 +135,7 @@ function selecionado3(produtoSelecionado){
 function finalizar() {
     PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
-    let precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
+    const precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
     let texto;
     texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${PedidoPrato}\n- Bebida: ${PedidoBebida}\n- Sobremesa: ${PedidoSobremesa}\nTotal: R$ ${precoBR}`;
     texto = window.encodeURIComponent(texto);
