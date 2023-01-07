@@ -124,12 +124,11 @@ function selecionado3(produtoSelecionado){
 
 function finalizar() {
     PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
-    console.log(PedidoPrecoTotal);
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
     let precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
     let texto;
     texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${PedidoPrato}\n- Bebida: ${PedidoBebida}\n- Sobremesa: ${PedidoSobremesa}\nTotal: R$ ${precoBR}`;
     texto = window.encodeURIComponent(texto);
-    window.open("https://wa.me/+5532999999999?text=" + texto);
+    window.open("https://wa.me/+5535999999999?text=" + texto);
     }
 }
