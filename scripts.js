@@ -8,7 +8,6 @@ let PedidoPrecoPrato= 0;
 let PedidoPrecoBebida = 0;
 let PedidoPrecoSobremesa = 0;
 let PedidoPrecoTotal = 0;
-let comparadisable = 0;
 
 const habilitarBotao = document.querySelector('.botao-fechar-pedido');
 const textohabilitarBotao = document.querySelector('.botao-fechar-pedido p');
@@ -42,7 +41,7 @@ function selecionado(produtoSelecionado){
 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
-        changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
+        const changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "Fechar Pedido";
         if (changeselector !== null){
             habilitarBotao.removeAttribute('disabled');
@@ -80,7 +79,7 @@ function selecionado2(produtoSelecionado){
 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
-        changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
+        const changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "Fechar Pedido";
         if (changeselector !== null){
             habilitarBotao.removeAttribute('disabled');
@@ -118,7 +117,7 @@ function selecionado3(produtoSelecionado){
 
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
-        changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
+        const changeselector = habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "Fechar Pedido";
         if (changeselector !== null){
             habilitarBotao.removeAttribute('disabled');
