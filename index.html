@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="modal ocultar">
-            <div class="conteudo-modal">
+            <div data-test="confirm-order-modal" class="conteudo-modal">
                 <p>Confirme seu pedido</p>
                 <div class="conteudo-modal-informacoes">
                     <div class="conteudo-modal-informacoes-nome-prato">
@@ -45,10 +45,10 @@
                         30,00
                     </div>
                 </div>
-                <div onclick="finalizar()" class="botao-enviar-final">
+                <div onclick="finalizar()" class="botao-enviar-final" data-test="confirm-order-btn" >
                     Tudo certo, pode pedir!
                 </div>
-                <div onclick="cancelar()" class="botao-cancelar-final">
+                <div onclick="cancelar()" class="botao-cancelar-final" data-test="cancel-order-btn" >
                     Cancelar
                 </div>
             </div>

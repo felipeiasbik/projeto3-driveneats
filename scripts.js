@@ -137,7 +137,6 @@ function finalizarModal() {
     PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
         const precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
-    console.log(modal);
     modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-prato').innerHTML = PedidoPrato;
     modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-prato').innerHTML = PedidoPrecoPrato.toFixed(2).replace(".", ",");
     modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-bebida').innerHTML = PedidoBebida;
