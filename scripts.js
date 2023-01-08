@@ -42,12 +42,12 @@ function selecionado(produtoSelecionado){
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
-        textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
+        textohabilitarBotao.innerHTML = "Fechar Pedido";
+        if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+            habilitarBotao.attributes.removeNamedItem("disabled");
+        }
     }
 
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
-        habilitarBotao.attributes.removeNamedItem("disabled");
-    }
 
 }
 
@@ -81,11 +81,10 @@ function selecionado2(produtoSelecionado){
     if(comparacaoPrato + comparacaoBebida + comparacaoSobremesa === 3){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
-        textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
-    }
-
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
-        habilitarBotao.attributes.removeNamedItem("disabled");
+        textohabilitarBotao.innerHTML = "Fechar Pedido";
+        if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+            habilitarBotao.attributes.removeNamedItem("disabled");
+        }
     }
 
 }
@@ -121,10 +120,9 @@ function selecionado3(produtoSelecionado){
         habilitarBotao.classList.remove('botao-fechar-pedido');
         habilitarBotao.classList.add('botao-fechar-pedido-habilitado');
         textohabilitarBotao.innerHTML = "Fechar Pedido";
-    }
-
-    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
-        habilitarBotao.attributes.removeNamedItem("disabled");
+        if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+            habilitarBotao.attributes.removeNamedItem("disabled");
+        }
     }
 
 }
