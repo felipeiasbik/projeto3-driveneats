@@ -45,7 +45,7 @@ function selecionado(produtoSelecionado){
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
     }
 
-    if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
         habilitarBotao.attributes.removeNamedItem("disabled");
     }
 
@@ -84,7 +84,7 @@ function selecionado2(produtoSelecionado){
         textohabilitarBotao.innerHTML = "FINALIZAR PEDIDO";
     }
 
-    if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
         habilitarBotao.attributes.removeNamedItem("disabled");
     }
 
@@ -123,7 +123,7 @@ function selecionado3(produtoSelecionado){
         textohabilitarBotao.innerHTML = "Fechar Pedido";
     }
 
-    if (habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined && habilitarBotao.getAttribute.hasOwnProperty("disabled") === true){
         habilitarBotao.attributes.removeNamedItem("disabled");
     }
 
