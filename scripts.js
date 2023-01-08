@@ -8,6 +8,8 @@ let PedidoPrecoPrato= 0;
 let PedidoPrecoBebida = 0;
 let PedidoPrecoSobremesa = 0;
 let PedidoPrecoTotal = 0;
+let nomeUsuario;
+let enderecoUsuario;
 
 const habilitarBotao = document.querySelector('.botao-fechar-pedido');
 const textohabilitarBotao = document.querySelector('.botao-fechar-pedido p');
@@ -126,14 +128,40 @@ function selecionado3(produtoSelecionado){
 
 }
 
+function finalizarModal() {
+    nomeUsuario = prompt("Digite o seu nome:");
+    enderecoUsuario = prompt("Digite o seu endereço:");
+
+    const modaloff = document.querySelector('.modal');
+    modaloff.classList.remove('ocultar');
+    PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
+    if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
+        const precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
+    const modal = document.querySelector('.conteudo-modal');
+    console.log(modal);
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-prato').innerHTML = PedidoPrato;
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-prato').innerHTML = PedidoPrecoPrato.toFixed(2).replace(".", ",");
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-bebida').innerHTML = PedidoBebida;
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-bebida').innerHTML = PedidoPrecoBebida.toFixed(2).replace(".", ",");
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-sobremesa').innerHTML = PedidoSobremesa;
+    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-sobremesa').innerHTML = PedidoPrecoSobremesa.toFixed(2).replace(".", ",");
+    modal.querySelector('.conteudo-modal-informacoes-total .conteudo-modal-informacoes-preco-total').innerHTML = `R$ ${PedidoPrecoTotal.toFixed(2).toString().replace(".", ",")}`;
+    }
+}
+
+function cancelar(){
+    const modaloff = document.querySelector('.modal');
+    modaloff.classList.add('ocultar');
+
+}
 
 function finalizar() {
     PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
     const precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
     let texto;
-    texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${PedidoPrato}\n- Bebida: ${PedidoBebida}\n- Sobremesa: ${PedidoSobremesa}\nTotal: R$ ${precoBR}`;
+    texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${PedidoPrato}\n- Bebida: ${PedidoBebida}\n- Sobremesa: ${PedidoSobremesa}\nTotal: R$ ${precoBR}\n\nNome: ${nomeUsuario}\nEndereço: ${enderecoUsuario}`;
     texto = window.encodeURIComponent(texto);
-    window.open("https://wa.me/+5535999999999?text=" + texto);
+    window.open("https://wa.me/+5511999151515?text=" + texto);
     }
 }

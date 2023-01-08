@@ -10,6 +10,49 @@
         <title>DrivenEats</title>
     </head>
     <body>
+        <div class="modal ocultar">
+            <div class="conteudo-modal">
+                <p>Confirme seu pedido</p>
+                <div class="conteudo-modal-informacoes">
+                    <div class="conteudo-modal-informacoes-nome-prato">
+                        Frango
+                    </div>
+                    <div class="conteudo-modal-informacoes-preco-prato">
+                        10,00
+                    </div>
+                </div>
+                <div class="conteudo-modal-informacoes">
+                    <div class="conteudo-modal-informacoes-nome-bebida">
+                        Frango
+                    </div>
+                    <div class="conteudo-modal-informacoes-preco-bebida">
+                        10,00
+                    </div>
+                </div>
+                <div class="conteudo-modal-informacoes">
+                    <div class="conteudo-modal-informacoes-nome-sobremesa">
+                        Frango
+                    </div>
+                    <div class="conteudo-modal-informacoes-preco-sobremesa">
+                        10,00
+                    </div>
+                </div>
+                <div class="conteudo-modal-informacoes-total">
+                    <div class="conteudo-modal-informacoes-nome-total">
+                        TOTAL
+                    </div>
+                    <div class="conteudo-modal-informacoes-preco-total">
+                        30,00
+                    </div>
+                </div>
+                <div onclick="finalizar()" class="botao-enviar-final">
+                    Tudo certo, pode pedir!
+                </div>
+                <div onclick="cancelar()" class="botao-cancelar-final">
+                    Cancelar
+                </div>
+            </div>
+        </div>
         <div class="conteudo">
             <div class="cabecalho">
                 <h1>DrivenEats</h1>
@@ -114,7 +157,7 @@
                 </div>
             </div>
             <div class="footer">
-                <div onclick="finalizar()" class="botao-fechar-pedido" disabled data-test="order-btn">
+                <div onclick="finalizarModal()" class="botao-fechar-pedido" disabled data-test="order-btn">
                     <p>Selecione os 3 itens para fechar o pedido</p>
                 </div>
             </div>
