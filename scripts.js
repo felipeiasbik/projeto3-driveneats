@@ -137,13 +137,13 @@ function finalizarModal() {
     PedidoPrecoTotal = PedidoPrecoPrato + PedidoPrecoBebida + PedidoPrecoSobremesa;
     if (PedidoPrato !== undefined && PedidoBebida !== undefined && PedidoSobremesa !== undefined){
         const precoBR = PedidoPrecoTotal.toFixed(2).toString().replace(".", ",");
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-prato').innerHTML = PedidoPrato;
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-prato').innerHTML = PedidoPrecoPrato.toFixed(2).replace(".", ",");
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-bebida').innerHTML = PedidoBebida;
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-bebida').innerHTML = PedidoPrecoBebida.toFixed(2).replace(".", ",");
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-sobremesa').innerHTML = PedidoSobremesa;
-    modal.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-sobremesa').innerHTML = PedidoPrecoSobremesa.toFixed(2).replace(".", ",");
-    modal.querySelector('.conteudo-modal-informacoes-total .conteudo-modal-informacoes-preco-total').innerHTML = `R$ ${PedidoPrecoTotal.toFixed(2).toString().replace(".", ",")}`;
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-prato').innerHTML = PedidoPrato;
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-prato').innerHTML = PedidoPrecoPrato.toFixed(2).replace(".", ",");
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-bebida').innerHTML = PedidoBebida;
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-bebida').innerHTML = PedidoPrecoBebida.toFixed(2).replace(".", ",");
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-nome-sobremesa').innerHTML = PedidoSobremesa;
+    modaloff.querySelector('.conteudo-modal-informacoes .conteudo-modal-informacoes-preco-sobremesa').innerHTML = PedidoPrecoSobremesa.toFixed(2).replace(".", ",");
+    modaloff.querySelector('.conteudo-modal-informacoes-total .conteudo-modal-informacoes-preco-total').innerHTML = `R$ ${PedidoPrecoTotal.toFixed(2).toString().replace(".", ",")}`;
     }
 }
 
